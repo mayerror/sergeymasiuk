@@ -20,6 +20,9 @@
   border-left: 3px solid $main-color-bd;
   flex: 1;
 
+  @media screen and (max-width: 710px) {
+    width: 90%;
+  }
   @media screen and (max-width: 410px) {
     width: 100%;
   }

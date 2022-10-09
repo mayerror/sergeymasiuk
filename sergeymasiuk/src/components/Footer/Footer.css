@@ -1,6 +1,7 @@
 .footer {
   min-height: 5rem;
   padding: 1rem 0;
+  font-family: 'Chakra Petch', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: #d0d7e2;
   border-top: 3px solid #393f44;
 }
@@ -14,17 +15,18 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  width: 90%;
+  width: 70%;
 }
 
 @media screen and (max-width: 710px) {
   .footer__wrapper {
+    width: 100%;
     justify-content: center;
   }
 }
 
 .footer__copyright {
-  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Chakra Petch', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   color: white;
 }
