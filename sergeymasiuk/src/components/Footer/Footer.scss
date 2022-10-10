@@ -4,8 +4,15 @@
   min-height: 5rem;
   padding: 1rem 0;
   font-family: 'Chakra Petch', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
   background-color: $main-color-light;
   border-top: 3px solid $main-color-bd;
+
+  &__social-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
 
   &__wrapper {
     margin: 0 auto;
@@ -28,21 +35,25 @@
     font-family: 'Chakra Petch', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1rem;
     // color: #000;
-    color: white;
+    color: $main-color-bd;
   }
 
   &__link {
     text-decoration: none;
-    color: white;
-    font-weight: 300;
+    color: $main-color-bd;
     cursor: pointer;
-
-    :hover {
-      text-decoration: dashed;
-    }
+    transition: 0.2s;
   }
 
   &__logo {
     height: 3rem;
+  }
+}
+
+.social-icon {
+  transition: 0.3s;
+
+  &:hover {
+    color: rgb(10, 14, 26);
   }
 }
