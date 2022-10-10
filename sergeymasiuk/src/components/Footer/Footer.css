@@ -4,7 +4,7 @@
   font-family: 'Chakra Petch', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 500;
   background-color: #d0d7e2;
-  border-top: 3px solid #393f44;
+  border-top: 3px solid #b0c3d3;
 }
 
 .footer__social-list {
@@ -35,12 +35,12 @@
 .footer__copyright {
   font-family: 'Chakra Petch', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
-  color: #393f44;
+  color: #3a4046;
 }
 
 .footer__link {
   text-decoration: none;
-  color: #393f44;
+  color: #3a4046;
   cursor: pointer;
   transition: 0.2s;
 }
