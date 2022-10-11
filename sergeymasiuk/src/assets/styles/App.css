@@ -14,8 +14,8 @@
   flex-direction: column;
   width: 70%;
   margin: 0 auto;
-  border-right: 3px solid #393f44;
-  border-left: 3px solid #393f44;
+  border-right: 2px solid #ffdce3;
+  border-left: 2px solid #ffdce3;
   flex: 1;
 }
 

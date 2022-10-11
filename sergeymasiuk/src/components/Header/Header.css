@@ -1,7 +1,38 @@
 .header {
   min-height: 8rem;
-  padding: 1rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 1rem;
   font-family: 'Chakra Petch', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 500;
-  border-bottom: 3px solid #b0c3d3;
+  border-bottom: 2px solid #faf5f6;
+}
+
+.header__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.header__text {
+  color: #3a4046;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-shadow: #e0e0e0 1px 2px 0;
+}
+
+.header__logo {
+  width: 8rem;
+  height: 8rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.header__image {
+  object-fit: contain;
 }
