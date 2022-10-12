@@ -1,14 +1,14 @@
-import Nav from '../Nav/Nav';
 import './Header.scss';
-import logo from '../../assets/images/avatar.jpg';
+import logo from '../../assets/images/avatar_result.webp';
+import Nav from '../Nav/Nav';
 
 function Header() {
   return (
     <header className="header">
       <div className="header__wrapper">
-        <p className="header__logo">
+        <div className="header__logo">
           <img alt="logo" className="header__image" src={logo} />
-        </p>
+        </div>
         <Nav />
       </div>
     </header>
