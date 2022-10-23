@@ -7,6 +7,7 @@
 
 * {
   box-sizing: border-box;
+  list-style-type: none;
 }
 
 .wrap {
@@ -14,8 +15,8 @@
   flex-direction: column;
   width: 70%;
   margin: 0 auto;
-  border-right: 2px solid #ffdce3;
-  border-left: 2px solid #ffdce3;
+  border-right: 2px solid #faf5f6;
+  border-left: 2px solid #faf5f6;
   flex: 1;
 }
 

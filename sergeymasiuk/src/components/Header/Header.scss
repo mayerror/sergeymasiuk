@@ -17,6 +17,11 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+
+    @media screen and (max-width: 510px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__text {
@@ -30,10 +35,16 @@
 
   &__logo {
     margin: 0;
-    width: 8rem;
-    height: 8rem;
+    width: 4rem;
+    height: 4rem;
     overflow: hidden;
     border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 4px 2px #fff;
+    }
   }
 
   &__image {

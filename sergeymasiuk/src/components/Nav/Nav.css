@@ -1,0 +1,28 @@
+.nav {
+  font-style: italic;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav__link {
+  color: #3a4046;
+  text-decoration: none;
+}
+
+.nav__link:hover, .nav__link:focus, .nav__link:active {
+  color: black;
+  text-shadow: #fff 1px 1px 0;
+}
+
+.nav__item {
+  transition: 0.15s ease-in-out;
+}
