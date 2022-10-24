@@ -18,10 +18,13 @@
     color: $main-color-font;
     text-decoration: none;
 
-    &:hover,
-    &:focus,
+    &:hover {
+      color: $main-color-hard-dark;
+      text-shadow: #fff 2px 2px 3px;
+    }
+
     &_active {
-      color: black;
+      color: $main-color-hard-dark;
       text-shadow: #fff 1px 1px 0;
     }
   }

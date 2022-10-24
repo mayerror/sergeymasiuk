@@ -1,0 +1,41 @@
+.about {
+  font-family: 'Lato', sans-serif;
+  padding: 4rem;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 1280px) {
+  .about {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.about__image {
+  width: 15rem;
+  height: 15rem;
+  margin-top: 3.2rem;
+  box-shadow: 0 0 1px 1px #999;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 1280px) {
+  .about__image {
+    order: -1;
+    margin-top: 0;
+  }
+}
+
+.about__title {
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about__text {
+  font-weight: 300;
+  font-size: 1.6rem;
+}
