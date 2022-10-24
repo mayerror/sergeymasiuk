@@ -16,6 +16,7 @@ function About() {
           ratione laudantium quam nobis. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           Vero fugit et quaerat, commodi iure
         </p>
+        <p className="about__text">my resume</p>
       </div>
       <img alt="logo" className="about__image" src={logo} />
     </main>
