@@ -1,5 +1,7 @@
 import './Header.scss';
 // import logo from '../../assets/images/avatar_result.webp';
+import { Link } from 'react-router-dom';
+
 import Nav from '../Nav/Nav';
 
 function Header() {
@@ -7,13 +9,13 @@ function Header() {
     <header className="header">
       <div className="header__wrapper">
         <div className="header__logo">
-          <a href="./">
+          <Link className="nav__link" to="/">
             <img
               alt="logo"
               className="header__image"
               src={`${process.env.PUBLIC_URL}/android-chrome-512x512.png`}
             />
-          </a>
+          </Link>
           {/* <img alt="logo" className="header__image" src={logo} /> */}
         </div>
         <Nav />

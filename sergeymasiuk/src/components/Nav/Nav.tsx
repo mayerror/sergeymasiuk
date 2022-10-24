@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import './Nav.scss';
 
 function Nav() {
@@ -5,19 +6,29 @@ function Nav() {
     <nav className="nav">
       <ul className="nav__list">
         <li className="nav__item">
-          <a className="nav__link" href="sdf">
+          <NavLink
+            className={({ isActive }) => (isActive ? 'nav__link nav__link_active' : 'nav__link')}
+            end
+            to="/"
+          >
             about
-          </a>
+          </NavLink>
         </li>
         <li className="nav__item">
-          <a className="nav__link" href="sdf">
+          <NavLink
+            className={({ isActive }) => (isActive ? 'nav__link nav__link_active' : 'nav__link')}
+            to="/portfolio"
+          >
             portfolio
-          </a>
+          </NavLink>
         </li>
         <li className="nav__item">
-          <a className="nav__link" href="sdf">
+          <NavLink
+            className={({ isActive }) => (isActive ? 'nav__link nav__link_active' : 'nav__link')}
+            to="/contact"
+          >
             contact
-          </a>
+          </NavLink>
         </li>
       </ul>
     </nav>
