@@ -5,6 +5,7 @@ import { FastAverageColor } from 'fast-average-color';
 
 type TypeCard = {
   picURL: string;
+  order: string;
 };
 
 function Card(props: TypeCard) {
@@ -27,10 +28,19 @@ function Card(props: TypeCard) {
     <div
       className="card"
       style={{
-        background: `linear-gradient(to right, ${color}, #d0d7e2)`,
+        background: `linear-gradient(${
+          props.order === '0' ? 'to right' : 'to left'
+        }, ${color}, #d0d7e2)`,
       }}
     >
-      <img alt="logo" className="card__screen" src={props.picURL} />
+      <img
+        alt="logo"
+        className="card__screen"
+        src={props.picURL}
+        style={{
+          order: `${props.order}`,
+        }}
+      />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate non ea, neque sunt
         eligendi qui asperiores voluptas tempora perspiciatis unde alias nihil fugiat necessitatibus

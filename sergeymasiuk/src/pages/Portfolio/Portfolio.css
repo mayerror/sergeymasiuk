@@ -8,3 +8,9 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+@media screen and (max-width: 1280px) {
+  .portfolio {
+    padding: 2rem;
+  }
+}

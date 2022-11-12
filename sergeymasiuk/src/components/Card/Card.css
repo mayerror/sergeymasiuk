@@ -6,6 +6,21 @@
   border: 1px solid #faf5f6;
 }
 
+@media screen and (max-width: 1140px) {
+  .card {
+    order: -1;
+    margin-top: 0;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
 .card__screen {
   width: 40%;
+}
+
+@media screen and (max-width: 1140px) {
+  .card__screen {
+    width: 100%;
+  }
 }
