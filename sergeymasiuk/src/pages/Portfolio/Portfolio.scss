@@ -1,1 +1,17 @@
 @import '../../assets/styles/variables';
+
+
+.portfolio {
+  padding: 4rem;
+
+  &__list {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  // &__item {
+  //   width: calc((100% - 1.1rem)/2);
+  // }
+}

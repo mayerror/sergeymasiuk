@@ -1,0 +1,14 @@
+@import '../../assets/styles/variables';
+
+.card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid $main-color-bd;
+
+  &__screen {
+    width: 40%;
+    // height: 15rem;
+  }
+}

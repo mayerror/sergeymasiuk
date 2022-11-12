@@ -17,6 +17,7 @@
 .wrap {
   display: flex;
   flex-direction: column;
+  max-width: 1200px;
   width: 70%;
   margin: 0 auto;
   border-right: 2px solid $main-color-bd;

@@ -1,0 +1,11 @@
+.card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #faf5f6;
+}
+
+.card__screen {
+  width: 40%;
+}

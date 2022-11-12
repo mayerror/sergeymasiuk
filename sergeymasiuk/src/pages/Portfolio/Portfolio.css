@@ -1,0 +1,10 @@
+.portfolio {
+  padding: 4rem;
+}
+
+.portfolio__list {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
