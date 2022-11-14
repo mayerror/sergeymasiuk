@@ -19,14 +19,9 @@
   width: 100%;
 }
 
-@media screen and (max-width: 1140px) {
-  .card__screen {
-    width: 100%;
-  }
-}
-
 .card__link {
-  display: block;
+  display: inline-block;
+  width: 60%;
   min-height: 5rem;
 }
 
