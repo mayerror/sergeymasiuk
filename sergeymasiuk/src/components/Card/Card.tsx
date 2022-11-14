@@ -5,11 +5,12 @@ import { FastAverageColor } from 'fast-average-color';
 
 type TypeCard = {
   picURL: string;
-  order: string;
+  order: number;
+  link: string;
 };
 
 function Card(props: TypeCard) {
-  const [color, setColor] = useState('#fff');
+  const [color, setColor] = useState('rgba(200,200,200,1)');
 
   useLayoutEffect(() => {
     const fac = new FastAverageColor();
@@ -17,7 +18,7 @@ function Card(props: TypeCard) {
     fac
       .getColorAsync(props.picURL)
       .then((calcColor) => {
-        setColor(calcColor.rgb);
+        setColor(calcColor.rgba);
       })
       .catch((e) => {
         console.log(e);
@@ -28,19 +29,23 @@ function Card(props: TypeCard) {
     <div
       className="card"
       style={{
-        background: `linear-gradient(${
-          props.order === '0' ? 'to right' : 'to left'
-        }, ${color}, #d0d7e2)`,
+        background: `linear-gradient(to ${!props.order ? 'right' : 'left'}, ${color.replace(
+          '1)',
+          '0.7)'
+        )}, #d0d7e2)`,
       }}
     >
-      <img
-        alt="logo"
-        className="card__screen"
-        src={props.picURL}
+      <a
+        className="card__link"
+        href={props.link}
+        rel="noreferrer"
         style={{
           order: `${props.order}`,
         }}
-      />
+        target="_blank"
+      >
+        <img alt="logo" className="card__screen" src={props.picURL} />
+      </a>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate non ea, neque sunt
         eligendi qui asperiores voluptas tempora perspiciatis unde alias nihil fugiat necessitatibus

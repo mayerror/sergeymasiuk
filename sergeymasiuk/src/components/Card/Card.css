@@ -16,11 +16,22 @@
 }
 
 .card__screen {
-  width: 40%;
+  width: 100%;
 }
 
 @media screen and (max-width: 1140px) {
   .card__screen {
+    width: 100%;
+  }
+}
+
+.card__link {
+  display: block;
+  min-height: 5rem;
+}
+
+@media screen and (max-width: 1140px) {
+  .card__link {
     width: 100%;
   }
 }
