@@ -36,16 +36,13 @@ function Card(props: TypeCard) {
         )}, #d0d7e2)`,
       }}
     >
-      <div className="card__screen-wrapper">
-        <a
-          className="card__link"
-          href={props.link}
-          rel="noreferrer"
-          style={{
-            order: `${props.order}`,
-          }}
-          target="_blank"
-        >
+      <div
+        className="card__screen-wrapper"
+        style={{
+          order: `${props.order}`,
+        }}
+      >
+        <a className="card__link" href={props.link} rel="noreferrer">
           <img alt="logo" className="card__screen" src={props.picURL} />
         </a>
       </div>
