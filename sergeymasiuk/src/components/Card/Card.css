@@ -1,5 +1,6 @@
 .card {
   display: flex;
+  justify-content: space-between;
   gap: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -15,13 +16,24 @@
   }
 }
 
+.card__screen-wrapper {
+  flex-basis: 40%;
+  flex-grow: 0;
+  align-self: center;
+}
+
+.card__descr-wrapper {
+  flex-basis: 60%;
+  flex-grow: 0;
+}
+
 .card__screen {
   width: 100%;
 }
 
 .card__link {
-  display: inline-block;
-  width: 60%;
+  display: block;
+  width: 100%;
   min-height: 5rem;
 }
 

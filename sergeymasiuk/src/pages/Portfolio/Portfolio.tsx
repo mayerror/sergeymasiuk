@@ -46,7 +46,6 @@ function Portfolio() {
           />
         </li>
       </ul>
-      c
     </main>
   );
 }

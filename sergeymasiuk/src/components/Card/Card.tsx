@@ -6,6 +6,7 @@ import { FastAverageColor } from 'fast-average-color';
 type TypeCard = {
   picURL: string;
   order: number;
+  // eslint-disable-next-line react/no-unused-prop-types
   link: string;
 };
 
@@ -35,22 +36,26 @@ function Card(props: TypeCard) {
         )}, #d0d7e2)`,
       }}
     >
-      <a
-        className="card__link"
-        href={props.link}
-        rel="noreferrer"
-        style={{
-          order: `${props.order}`,
-        }}
-        target="_blank"
-      >
-        <img alt="logo" className="card__screen" src={props.picURL} />
-      </a>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate non ea, neque sunt
-        eligendi qui asperiores voluptas tempora perspiciatis unde alias nihil fugiat necessitatibus
-        quas, possimus facere delectus illum eius!
-      </p>
+      <div className="card__screen-wrapper">
+        <a
+          className="card__link"
+          href={props.link}
+          rel="noreferrer"
+          style={{
+            order: `${props.order}`,
+          }}
+          target="_blank"
+        >
+          <img alt="logo" className="card__screen" src={props.picURL} />
+        </a>
+      </div>
+      <div className="card__descr-wrapper">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate non ea, neque sunt
+          eligendi qui asperiores voluptas tempora perspiciatis unde alias nihil fugiat
+          necessitatibus quas, possimus facere delectus illum eius!
+        </p>
+      </div>
     </div>
   );
 }
