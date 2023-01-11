@@ -32,7 +32,7 @@ function Card(props: TypeCard) {
       style={{
         background: `linear-gradient(to ${!props.order ? 'right' : 'left'}, ${color.replace(
           '1)',
-          '0.7)'
+          '0.8)'
         )}, #d0d7e2)`,
       }}
     >
