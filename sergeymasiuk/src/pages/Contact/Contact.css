@@ -23,7 +23,7 @@
 }
 
 .contact__input {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
   font-family: "Lato", sans-serif;
   padding-left: 0.3rem;
@@ -36,9 +36,22 @@
 
 .contact__text {
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   flex: 1 1;
   resize: none;
+}
+
+.contact__label {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  text-align: left;
+}
+
+.contact__wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .contact__submit {
@@ -49,4 +62,13 @@
   height: 3rem;
   margin-bottom: 2rem;
   cursor: pointer;
+}
+
+.contact__error {
+  display: inline-block;
+  border: 1px solid #b9a4a4;
+  background-color: #db2345;
+  padding: 0 0.4rem;
+  color: #fff;
+  border-radius: 0.2rem;
 }

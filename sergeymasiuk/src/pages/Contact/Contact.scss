@@ -24,7 +24,7 @@
   }
 
   &__input {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     font-family: "Lato", sans-serif;
     padding-left: 0.3rem;
@@ -37,10 +37,23 @@
 
   &__text {
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     flex: 1 1;
     resize: none;
     // height: 400px;
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    text-align: left;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
   }
 
   &__submit {
@@ -51,5 +64,14 @@
     height: 3rem;
     margin-bottom: 2rem;
     cursor: pointer;
+  }
+
+  &__error {
+    display: inline-block;
+    border: 1px solid #b9a4a4;
+    background-color: $main-color-error;
+    padding: 0 0.4rem;
+    color: #fff;
+    border-radius: 0.2rem;
   }
 }

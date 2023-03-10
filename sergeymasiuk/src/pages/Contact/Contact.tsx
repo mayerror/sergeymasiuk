@@ -1,28 +1,50 @@
 import './Contact.scss';
 import { useForm } from 'react-hook-form';
+import { FcCheckmark } from 'react-icons/fc';
 
 type FormData = {
   email: string;
   name: string;
+  text: string;
 };
 
 function Contact() {
   const {
     register,
     handleSubmit,
-    watch,
-    formState: { errors },
+    reset,
+    formState: { errors, isSubmitSuccessful },
   } = useForm<FormData>();
 
-  const onSubmit = (data: FormData) => console.log(data);
-  const onError = (errorData: any) => console.log(errorData);
+  const onSubmit = (data: FormData) => {
+    console.log(data);
+    reset();
+  };
+  const onError = (errorData: any) => {
+    console.log(errorData);
+  };
 
   return (
     <main className="main contact">
-      <h1 className="contact__title">Contact</h1>
+      <div className="contact__wrapper">
+        <h1 className="contact__title">Contact</h1>
+        {isSubmitSuccessful && <FcCheckmark size={22} />}
+      </div>
       <form className="contact__form" noValidate onSubmit={handleSubmit(onSubmit, onError)}>
+        <div className="contact__wrapper">
+          <label className="contact__label" htmlFor="email">
+            Email:
+          </label>
+          {errors.email && errors.email.type === 'required' && (
+            <p className="contact__error">Email is required</p>
+          )}
+          {errors.email && errors.email.type === 'pattern' && (
+            <p className="contact__error">This is not an email</p>
+          )}
+        </div>
         <input
           className="contact__input contact__single"
+          id="email"
           type="email"
           {...register('email', {
             required: true,
@@ -32,14 +54,33 @@ function Contact() {
             },
           })}
         />
+        <div className="contact__wrapper">
+          <label className="contact__label" htmlFor="name">
+            Name:
+          </label>
+          {errors.name && <p className="contact__error">Name is required</p>}
+        </div>
         <input
           className="contact__input contact__single"
+          id="name"
           type="text"
           {...register('name', {
             required: true,
           })}
         />
-        <textarea className="contact__input contact__text" />
+        <div className="contact__wrapper">
+          <label className="contact__label" htmlFor="text">
+            Message:
+          </label>
+          {errors.text && <p className="contact__error">Message is required</p>}
+        </div>
+        <textarea
+          className="contact__input contact__text"
+          id="text"
+          {...register('text', {
+            required: true,
+          })}
+        />
         <input className="contact__submit" type="submit" value="Submit" />
       </form>
     </main>
