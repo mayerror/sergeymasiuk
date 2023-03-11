@@ -31,7 +31,7 @@
     "@typescript-eslint"
   ],
   "rules": {
-    "prettier/prettier": ["warn", {}, { "usePrettierrc": true }],
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
     "no-param-reassign": "warn",
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-props-no-spreading": "warn",
@@ -62,9 +62,6 @@
     }],
     "react/destructuring-assignment": ["warn", "always", {
       "ignoreClassFields": true
-    }],
-    "react/jsx-max-props-per-line": ["error", {
-      "maximum": 3
     }],
     "react/jsx-sort-props": ["error", {
       "ignoreCase": true

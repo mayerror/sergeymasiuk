@@ -2,6 +2,8 @@ import './Contact.scss';
 import { useForm } from 'react-hook-form';
 import { FcCheckmark } from 'react-icons/fc';
 
+import { isDisabled } from '@testing-library/user-event/dist/utils';
+
 type FormData = {
   email: string;
   name: string;
@@ -13,7 +15,7 @@ function Contact() {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isSubmitSuccessful },
+    formState: { errors, isSubmitSuccessful, isValidating },
   } = useForm<FormData>();
 
   const onSubmit = (data: FormData) => {
@@ -81,7 +83,13 @@ function Contact() {
             required: true,
           })}
         />
-        <input className="contact__submit" type="submit" value="Submit" />
+        {/* <input className="contact__submit" type="submit" value="Submit" /> */}
+        <input
+          className="contact__submit"
+          disabled={Object.keys(errors).length !== 0}
+          type="submit"
+          value="Submit"
+        />
       </form>
     </main>
   );
