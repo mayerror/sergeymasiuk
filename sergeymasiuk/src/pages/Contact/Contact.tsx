@@ -2,6 +2,7 @@ import './Contact.scss';
 import { useForm } from 'react-hook-form';
 import { FcCheckmark } from 'react-icons/fc';
 
+import { send } from '@emailjs/browser';
 import { isDisabled } from '@testing-library/user-event/dist/utils';
 
 type FormData = {
@@ -19,7 +20,19 @@ function Contact() {
   } = useForm<FormData>();
 
   const onSubmit = (data: FormData) => {
-    console.log(data);
+    const templateParams = {
+      email: data.email,
+      from_name: data.name,
+      message: data.text,
+    };
+    send('mayerror', 'template_g8xg1se', templateParams, 'rBoJyDC2jHHo7LWQZ').then(
+      (response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      },
+      (error) => {
+        console.log('FAILED...', error);
+      }
+    );
     reset();
   };
   const onError = (errorData: any) => {
