@@ -6,6 +6,7 @@ import csslogo from '../../assets/images/icons8-css3-48.png';
 import jslogo from '../../assets/images/icons8-javascript-48.png';
 import redlogo from '../../assets/images/icons8-redux-48.png';
 import sasslogo from '../../assets/images/icons8-sass-48.png';
+import tslogo from '../../assets/images/icons8-typescript-48.png';
 
 function About() {
   return (
@@ -35,6 +36,10 @@ function About() {
           <div className="tooltip">
             <img alt="js logo" className="about__brand-logo" src={jslogo} />
             <span className="tooltiptext">Javascript</span>
+          </div>
+          <div className="tooltip">
+            <img alt="typescript logo" className="about__brand-logo" src={tslogo} />
+            <span className="tooltiptext">Typescript</span>
           </div>
           <div className="tooltip">
             <img alt="react logo" className="about__brand-logo" src={relogo} />

@@ -48,9 +48,9 @@ function Card(props: TypeCard) {
       </div>
       <div className="card__descr-wrapper">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate non ea, neque sunt
-          eligendi qui asperiores voluptas tempora perspiciatis unde alias nihil fugiat
-          necessitatibus quas, possimus facere delectus illum eius!
+          The project was developed as part of the React RS school course. Task: Make an interactive
+          SPA application using the Flickr API or similar. Getting information, using sorting,
+          navigation is done using the API.
         </p>
       </div>
     </div>
