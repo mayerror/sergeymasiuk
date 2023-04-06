@@ -17,10 +17,11 @@ function About() {
           courses.
         </p>
         <p className="about__text about__text-about">
-          At the moment I work as an electrical engineer at an aircraft factory and develop
+          At the moment I work as an electrical engineer at an aircraft repair plant and develop
           automated process control systems. I want to change the scope of work to front-end
           development, the direction where complex projects go hand in hand with creativity.
         </p>
+        <hr className="about__line" />
         <div className="about__stack-wrapper">
           <p className="about__text about__text-bold">Tech Stack &nbsp;&nbsp;|</p>
           <div className="tooltip">

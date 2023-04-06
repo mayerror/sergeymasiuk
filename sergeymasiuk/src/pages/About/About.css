@@ -96,6 +96,10 @@
   cursor: pointer;
 }
 
+.about__line {
+  margin-top: 1.2rem;
+}
+
 .tooltip {
   position: relative;
   display: inline-block;
