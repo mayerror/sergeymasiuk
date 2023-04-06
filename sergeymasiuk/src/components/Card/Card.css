@@ -17,13 +17,19 @@
 }
 
 .card__screen-wrapper {
-  flex-basis: 40%;
+  flex-basis: 60%;
   flex-grow: 0;
   align-self: center;
 }
 
+@media screen and (max-width: 1140px) {
+  .card__screen-wrapper {
+    order: -1 !important;
+  }
+}
+
 .card__descr-wrapper {
-  flex-basis: 60%;
+  flex-basis: 40%;
   flex-grow: 0;
 }
 
