@@ -8,16 +8,18 @@ type TypeCard = {
   order: number;
   // eslint-disable-next-line react/no-unused-prop-types
   link: string;
+  description: string;
+  stack: string;
 };
 
-function Card(props: TypeCard) {
+function Card({ picURL, order, link, description, stack }: TypeCard) {
   const [color, setColor] = useState('rgba(200,200,200,1)');
 
   useLayoutEffect(() => {
     const fac = new FastAverageColor();
 
     fac
-      .getColorAsync(props.picURL)
+      .getColorAsync(picURL)
       .then((calcColor) => {
         setColor(calcColor.rgba);
       })
@@ -30,7 +32,7 @@ function Card(props: TypeCard) {
     <div
       className="card"
       style={{
-        background: `linear-gradient(to ${!props.order ? 'right' : 'left'}, ${color.replace(
+        background: `linear-gradient(to ${!order ? 'right' : 'left'}, ${color.replace(
           '1)',
           '0.8)'
         )}, #d0d7e2)`,
@@ -39,18 +41,21 @@ function Card(props: TypeCard) {
       <div
         className="card__screen-wrapper"
         style={{
-          order: `${props.order}`,
+          order: `${order}`,
         }}
       >
-        <a className="card__link" href={props.link} rel="noreferrer">
-          <img alt="logo" className="card__screen" src={props.picURL} />
+        <a className="card__link" href={link} rel="noreferrer">
+          <img alt="logo" className="card__screen" src={picURL} />
         </a>
       </div>
       <div className="card__descr-wrapper">
-        <p>
-          The project was developed as part of the React RS school course. Task: Make an interactive
-          SPA application using the Flickr API or similar. Getting information, using sorting,
-          navigation is done using the API.
+        <p className="card__description">
+          <b>Description: </b>
+          {description}
+        </p>
+        <p className="card__description">
+          <b>Stack: </b>
+          {stack}
         </p>
       </div>
     </div>

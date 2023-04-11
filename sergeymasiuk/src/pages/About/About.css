@@ -1,18 +1,18 @@
 @keyframes smooth-ava {
   from {
-    border-radius: 60% 40% 70% 55%;
+    border-radius: 65% 45% 80% 55%;
   }
   25% {
-    border-radius: 50% 70% 40% 65%;
+    border-radius: 55% 70% 45% 65%;
   }
   50% {
-    border-radius: 65% 50% 60% 40%;
+    border-radius: 75% 50% 60% 45%;
   }
   75% {
-    border-radius: 45% 60% 40% 70%;
+    border-radius: 45% 60% 40% 75%;
   }
   to {
-    border-radius: 60% 40% 70% 55%;
+    border-radius: 65% 45% 80% 55%;
   }
 }
 
@@ -117,7 +117,7 @@
   /* Position the tooltip */
   position: absolute;
   top: -2.5rem;
-  left: -1rem;
+  left: -2rem;
   z-index: 10;
   transition: opacity 0.3s ease-out;
 }
